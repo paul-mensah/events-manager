@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2FAD1D14-8393-4B98-8839-4D08800DEF9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{360A5793-F4EA-480A-B356-1F1F1E1D3D97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5C22F3BC-2149-4119-BC16-3E04DBEA9BDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsManager.API", "src\EventsManager.API\EventsManager.API.csproj", "{74397DE2-EA7E-4C6B-9434-88B4C7D124E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsManager.API.Tests", "tests\EventsManager.API.Tests\EventsManager.API.Tests.csproj", "{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74397DE2-EA7E-4C6B-9434-88B4C7D124E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74397DE2-EA7E-4C6B-9434-88B4C7D124E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74397DE2-EA7E-4C6B-9434-88B4C7D124E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74397DE2-EA7E-4C6B-9434-88B4C7D124E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74397DE2-EA7E-4C6B-9434-88B4C7D124E1} = {2FAD1D14-8393-4B98-8839-4D08800DEF9D}
+		{3DCBB6B2-9CFD-4CA0-BF45-FEA4F5E467C7} = {5C22F3BC-2149-4119-BC16-3E04DBEA9BDE}
+	EndGlobalSection
+EndGlobal

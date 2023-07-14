@@ -1,0 +1,76 @@
+﻿version: '3.8'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.1
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+  
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.14.1
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+  
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    command: ["redis-server", "--bind", "redis", "--port", "6379"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+
+  db:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: superpassword
+      MYSQL_DATABASE: eventmanager
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+  
+  eventsmanager.api:
+    image: events-manager.api
+    build:
+      context: .
+      dockerfile: src/EventsManager.API/Dockerfile
+    ports:
+      - "5467:80"
+    restart: always
+    depends_on:
+      - db
+      - redis
+      - elasticsearch
+    links:
+      - db
+    environment:
+      - DBHOST=db
+
+volumes:
+    esdata:
+      driver: local
+    redisdata:
+      driver: local
+    dbdata:
+    
