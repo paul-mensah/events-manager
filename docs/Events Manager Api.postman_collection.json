@@ -1,0 +1,3061 @@
+{
+	"info": {
+		"_postman_id": "76641a2a-5abc-473e-b588-ae31fde8bbcc",
+		"name": "Events Manager Api",
+		"description": "Events Manager Api\n\nContact Support:\n Name: Paul Mensah\n Email: paulmensah1409@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/events",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "participant",
+							"item": [
+								{
+									"name": "Add participant to event",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id/participant",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id",
+												"participant"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": 9597399,\n  \"message\": \"sint id eiusmo\",\n  \"data\": {\n    \"id\": \"voluptate irure quis dolore\",\n    \"title\": \"consequat in\",\n    \"description\": \"tempor elit\",\n    \"photoUrl\": \"et reprehende\",\n    \"location\": {\n      \"city\": \"consectetur exercitation\",\n      \"zipCode\": \"fugiat voluptate\"\n    },\n    \"participants\": [\n      {\n        \"username\": \"consectetur commodo n\",\n        \"email\": \"eiusmod exercitation\",\n        \"name\": \"voluptate aliquip irure ullamco ipsum\",\n        \"photoUrl\": \"laborum Lorem aute do labore\"\n      },\n      {\n        \"username\": \"est sint eu\",\n        \"email\": \"pariatur Lorem Ut dolor labore\",\n        \"name\": \"do\",\n        \"photoUrl\": \"culpa non nisi\"\n      }\n    ],\n    \"startDate\": \"1992-12-16T10:42:22.676Z\",\n    \"endDate\": \"1947-04-13T21:55:42.867Z\",\n    \"createdAt\": \"1972-07-04T12:27:49.563Z\",\n    \"updatedAt\": \"2015-03-06T15:34:15.623Z\",\n    \"createdBy\": \"Excepteur anim dolore\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Conflict",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"lgaPAUiR5Co1S@oRSVPxMQW.zx\",\n  \"name\": \"in Lorem ex dolore\",\n  \"photoUrl\": \"quis\",\n  \"username\": \"non aute consectetur ea\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								},
+								{
+									"name": "Remove participant from an event",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id/participant/:username",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id",
+												"participant",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												},
+												{
+													"key": "username",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														},
+														{
+															"key": "username",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": 9597399,\n  \"message\": \"sint id eiusmo\",\n  \"data\": {\n    \"id\": \"voluptate irure quis dolore\",\n    \"title\": \"consequat in\",\n    \"description\": \"tempor elit\",\n    \"photoUrl\": \"et reprehende\",\n    \"location\": {\n      \"city\": \"consectetur exercitation\",\n      \"zipCode\": \"fugiat voluptate\"\n    },\n    \"participants\": [\n      {\n        \"username\": \"consectetur commodo n\",\n        \"email\": \"eiusmod exercitation\",\n        \"name\": \"voluptate aliquip irure ullamco ipsum\",\n        \"photoUrl\": \"laborum Lorem aute do labore\"\n      },\n      {\n        \"username\": \"est sint eu\",\n        \"email\": \"pariatur Lorem Ut dolor labore\",\n        \"name\": \"do\",\n        \"photoUrl\": \"culpa non nisi\"\n      }\n    ],\n    \"startDate\": \"1992-12-16T10:42:22.676Z\",\n    \"endDate\": \"1947-04-13T21:55:42.867Z\",\n    \"createdAt\": \"1972-07-04T12:27:49.563Z\",\n    \"updatedAt\": \"2015-03-06T15:34:15.623Z\",\n    \"createdBy\": \"Excepteur anim dolore\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														},
+														{
+															"key": "username",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														},
+														{
+															"key": "username",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/:id/participant/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														":id",
+														"participant",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														},
+														{
+															"key": "username",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get event by id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "id proident sed",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 9597399,\n  \"message\": \"sint id eiusmo\",\n  \"data\": {\n    \"id\": \"voluptate irure quis dolore\",\n    \"title\": \"consequat in\",\n    \"description\": \"tempor elit\",\n    \"photoUrl\": \"et reprehende\",\n    \"location\": {\n      \"city\": \"consectetur exercitation\",\n      \"zipCode\": \"fugiat voluptate\"\n    },\n    \"participants\": [\n      {\n        \"username\": \"consectetur commodo n\",\n        \"email\": \"eiusmod exercitation\",\n        \"name\": \"voluptate aliquip irure ullamco ipsum\",\n        \"photoUrl\": \"laborum Lorem aute do labore\"\n      },\n      {\n        \"username\": \"est sint eu\",\n        \"email\": \"pariatur Lorem Ut dolor labore\",\n        \"name\": \"do\",\n        \"photoUrl\": \"culpa non nisi\"\n      }\n    ],\n    \"startDate\": \"1992-12-16T10:42:22.676Z\",\n    \"endDate\": \"1947-04-13T21:55:42.867Z\",\n    \"createdAt\": \"1972-07-04T12:27:49.563Z\",\n    \"updatedAt\": \"2015-03-06T15:34:15.623Z\",\n    \"createdBy\": \"Excepteur anim dolore\"\n  }\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete event",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "id proident sed",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "invitations",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get invitation by id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": 67760953,\n  \"message\": \"sint amet\",\n  \"data\": {\n    \"id\": \"adipis\",\n    \"username\": \"consequat amet\",\n    \"email\": \"magna\",\n    \"name\": \"anim irure incididunt ea\",\n    \"photoUrl\": \"et esse\",\n    \"eventId\": \"ame\",\n    \"title\": \"veniam enim aliqua\",\n    \"description\": \"cupidatat esse\",\n    \"invitedBy\": \"aliqua\",\n    \"isAccepted\": true,\n    \"acceptedDate\": \"1954-05-13T04:32:00.487Z\",\n    \"createdAt\": \"2013-11-19T04:42:23.516Z\",\n    \"updatedAt\": \"1976-10-03T06:26:35.077Z\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete invitation by id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								},
+								{
+									"name": "Decline invitation by id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":id",
+												"decline"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"decline"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": 67760953,\n  \"message\": \"sint amet\",\n  \"data\": {\n    \"id\": \"adipis\",\n    \"username\": \"consequat amet\",\n    \"email\": \"magna\",\n    \"name\": \"anim irure incididunt ea\",\n    \"photoUrl\": \"et esse\",\n    \"eventId\": \"ame\",\n    \"title\": \"veniam enim aliqua\",\n    \"description\": \"cupidatat esse\",\n    \"invitedBy\": \"aliqua\",\n    \"isAccepted\": true,\n    \"acceptedDate\": \"1954-05-13T04:32:00.487Z\",\n    \"createdAt\": \"2013-11-19T04:42:23.516Z\",\n    \"updatedAt\": \"1976-10-03T06:26:35.077Z\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"decline"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Conflict",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"decline"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"decline"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/decline",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"decline"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								},
+								{
+									"name": "Accept invitation by id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":id",
+												"accept"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": 67760953,\n  \"message\": \"sint amet\",\n  \"data\": {\n    \"id\": \"adipis\",\n    \"username\": \"consequat amet\",\n    \"email\": \"magna\",\n    \"name\": \"anim irure incididunt ea\",\n    \"photoUrl\": \"et esse\",\n    \"eventId\": \"ame\",\n    \"title\": \"veniam enim aliqua\",\n    \"description\": \"cupidatat esse\",\n    \"invitedBy\": \"aliqua\",\n    \"isAccepted\": true,\n    \"acceptedDate\": \"1954-05-13T04:32:00.487Z\",\n    \"createdAt\": \"2013-11-19T04:42:23.516Z\",\n    \"updatedAt\": \"1976-10-03T06:26:35.077Z\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Conflict",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Client Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Failed Dependency (WebDAV) (RFC 4918)",
+											"code": 424,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/events/invitations/:id/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"events",
+														"invitations",
+														":id",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "id proident sed",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Create event invitation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"UrdMIvqDZTRLOuI@ENG.sb\",\n  \"eventId\": \"eu occaecat pariatur\",\n  \"invitedBy\": \"deserunt dolore\",\n  \"name\": \"proident sint do est dolor\",\n  \"photoUrl\": \"tempor sit\",\n  \"username\": \"adipisicing aute\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/events/invitations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events",
+										"invitations"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"UrdMIvqDZTRLOuI@ENG.sb\",\n  \"eventId\": \"eu occaecat pariatur\",\n  \"invitedBy\": \"deserunt dolore\",\n  \"name\": \"proident sint do est dolor\",\n  \"photoUrl\": \"tempor sit\",\n  \"username\": \"adipisicing aute\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 67760953,\n  \"message\": \"sint amet\",\n  \"data\": {\n    \"id\": \"adipis\",\n    \"username\": \"consequat amet\",\n    \"email\": \"magna\",\n    \"name\": \"anim irure incididunt ea\",\n    \"photoUrl\": \"et esse\",\n    \"eventId\": \"ame\",\n    \"title\": \"veniam enim aliqua\",\n    \"description\": \"cupidatat esse\",\n    \"invitedBy\": \"aliqua\",\n    \"isAccepted\": true,\n    \"acceptedDate\": \"1954-05-13T04:32:00.487Z\",\n    \"createdAt\": \"2013-11-19T04:42:23.516Z\",\n    \"updatedAt\": \"1976-10-03T06:26:35.077Z\"\n  }\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"UrdMIvqDZTRLOuI@ENG.sb\",\n  \"eventId\": \"eu occaecat pariatur\",\n  \"invitedBy\": \"deserunt dolore\",\n  \"name\": \"proident sint do est dolor\",\n  \"photoUrl\": \"tempor sit\",\n  \"username\": \"adipisicing aute\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"UrdMIvqDZTRLOuI@ENG.sb\",\n  \"eventId\": \"eu occaecat pariatur\",\n  \"invitedBy\": \"deserunt dolore\",\n  \"name\": \"proident sint do est dolor\",\n  \"photoUrl\": \"tempor sit\",\n  \"username\": \"adipisicing aute\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"UrdMIvqDZTRLOuI@ENG.sb\",\n  \"eventId\": \"eu occaecat pariatur\",\n  \"invitedBy\": \"deserunt dolore\",\n  \"name\": \"proident sint do est dolor\",\n  \"photoUrl\": \"tempor sit\",\n  \"username\": \"adipisicing aute\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all invitations with filter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events/invitations?Username=id proident sed&Email=id proident sed&Name=id proident sed&EventId=id proident sed&Title=id proident sed&InvitedBy=id proident sed&IsAccepted=true&AcceptedDate=1981-10-06T05:28:35.544Z&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events",
+										"invitations"
+									],
+									"query": [
+										{
+											"key": "Username",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Email",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Name",
+											"value": "id proident sed"
+										},
+										{
+											"key": "EventId",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Title",
+											"value": "id proident sed"
+										},
+										{
+											"key": "InvitedBy",
+											"value": "id proident sed"
+										},
+										{
+											"key": "IsAccepted",
+											"value": "true"
+										},
+										{
+											"key": "AcceptedDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "PageSize",
+											"value": "9"
+										},
+										{
+											"key": "CurrentPage",
+											"value": "869206187"
+										},
+										{
+											"key": "OrderBy",
+											"value": "id proident sed"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations?Username=id proident sed&Email=id proident sed&Name=id proident sed&EventId=id proident sed&Title=id proident sed&InvitedBy=id proident sed&IsAccepted=true&AcceptedDate=1981-10-06T05:28:35.544Z&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											],
+											"query": [
+												{
+													"key": "Username",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Email",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Name",
+													"value": "id proident sed"
+												},
+												{
+													"key": "EventId",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Title",
+													"value": "id proident sed"
+												},
+												{
+													"key": "InvitedBy",
+													"value": "id proident sed"
+												},
+												{
+													"key": "IsAccepted",
+													"value": "true"
+												},
+												{
+													"key": "AcceptedDate",
+													"value": "1981-10-06T05:28:35.544Z"
+												},
+												{
+													"key": "PageSize",
+													"value": "9"
+												},
+												{
+													"key": "CurrentPage",
+													"value": "869206187"
+												},
+												{
+													"key": "OrderBy",
+													"value": "id proident sed"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 71816310,\n  \"message\": \"pariatur Duis\",\n  \"data\": {\n    \"currentPage\": 20118801,\n    \"pageSize\": -7342028,\n    \"totalRecords\": 51155945,\n    \"totalPages\": 7363074,\n    \"data\": [\n      {\n        \"id\": \"ullamco ad mollit\",\n        \"username\": \"commodo esse pariatur\",\n        \"email\": \"minim anim\",\n        \"name\": \"culpa do\",\n        \"photoUrl\": \"dolore no\",\n        \"eventId\": \"ipsum aliquip anim commodo\",\n        \"title\": \"cupida\",\n        \"description\": \"Exce\",\n        \"invitedBy\": \"amet et mollit\",\n        \"isAccepted\": false,\n        \"acceptedDate\": \"2019-06-09T20:49:28.217Z\",\n        \"createdAt\": \"2001-01-19T01:44:54.965Z\",\n        \"updatedAt\": \"1959-12-08T12:48:18.098Z\"\n      },\n      {\n        \"id\": \"ullamco voluptate nulla\",\n        \"username\": \"minim\",\n        \"email\": \"officia sed veniam\",\n        \"name\": \"adipisicing laborum ipsum\",\n        \"photoUrl\": \"in officia\",\n        \"eventId\": \"elit fugiat labore\",\n        \"title\": \"aliquip laborum\",\n        \"description\": \"incididunt occaecat dolore\",\n        \"invitedBy\": \"aliqua mollit id anim incididunt\",\n        \"isAccepted\": false,\n        \"acceptedDate\": \"1960-10-25T11:29:02.820Z\",\n        \"createdAt\": \"1991-05-05T06:10:58.115Z\",\n        \"updatedAt\": \"2018-12-01T09:17:33.210Z\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations?Username=id proident sed&Email=id proident sed&Name=id proident sed&EventId=id proident sed&Title=id proident sed&InvitedBy=id proident sed&IsAccepted=true&AcceptedDate=1981-10-06T05:28:35.544Z&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											],
+											"query": [
+												{
+													"key": "Username",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Email",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Name",
+													"value": "id proident sed"
+												},
+												{
+													"key": "EventId",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Title",
+													"value": "id proident sed"
+												},
+												{
+													"key": "InvitedBy",
+													"value": "id proident sed"
+												},
+												{
+													"key": "IsAccepted",
+													"value": "true"
+												},
+												{
+													"key": "AcceptedDate",
+													"value": "1981-10-06T05:28:35.544Z"
+												},
+												{
+													"key": "PageSize",
+													"value": "9"
+												},
+												{
+													"key": "CurrentPage",
+													"value": "869206187"
+												},
+												{
+													"key": "OrderBy",
+													"value": "id proident sed"
+												}
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations?Username=id proident sed&Email=id proident sed&Name=id proident sed&EventId=id proident sed&Title=id proident sed&InvitedBy=id proident sed&IsAccepted=true&AcceptedDate=1981-10-06T05:28:35.544Z&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations"
+											],
+											"query": [
+												{
+													"key": "Username",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Email",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Name",
+													"value": "id proident sed"
+												},
+												{
+													"key": "EventId",
+													"value": "id proident sed"
+												},
+												{
+													"key": "Title",
+													"value": "id proident sed"
+												},
+												{
+													"key": "InvitedBy",
+													"value": "id proident sed"
+												},
+												{
+													"key": "IsAccepted",
+													"value": "true"
+												},
+												{
+													"key": "AcceptedDate",
+													"value": "1981-10-06T05:28:35.544Z"
+												},
+												{
+													"key": "PageSize",
+													"value": "9"
+												},
+												{
+													"key": "CurrentPage",
+													"value": "869206187"
+												},
+												{
+													"key": "OrderBy",
+													"value": "id proident sed"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Get user invitations that are pending approval",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events/invitations/:username/approvals/pending",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events",
+										"invitations",
+										":username",
+										"approvals",
+										"pending"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "id proident sed",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:username/approvals/pending",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":username",
+												"approvals",
+												"pending"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -45635493,\n  \"message\": \"ut cillum anim Duis\",\n  \"data\": [\n    {\n      \"id\": \"dolore eu amet\",\n      \"username\": \"et velit est\",\n      \"email\": \"et velit occaecat commodo\",\n      \"name\": \"id\",\n      \"photoUrl\": \"n\",\n      \"eventId\": \"voluptate commodo\",\n      \"title\": \"aliquip minim ut non\",\n      \"description\": \"qui laborum\",\n      \"invitedBy\": \"sint dolor\",\n      \"isAccepted\": true,\n      \"acceptedDate\": \"1958-09-01T11:05:00.226Z\",\n      \"createdAt\": \"1987-08-07T05:24:59.336Z\",\n      \"updatedAt\": \"1993-12-24T17:41:39.425Z\"\n    },\n    {\n      \"id\": \"ea occaecat nulla\",\n      \"username\": \"est occaecat sint ut ad\",\n      \"email\": \"sunt ut\",\n      \"name\": \"incididunt tempor amet m\",\n      \"photoUrl\": \"eu\",\n      \"eventId\": \"elit dolore\",\n      \"title\": \"id consequat voluptate commodo\",\n      \"description\": \"sint reprehenderit minim\",\n      \"invitedBy\": \"irure minim elit magna\",\n      \"isAccepted\": false,\n      \"acceptedDate\": \"1967-05-14T18:34:59.584Z\",\n      \"createdAt\": \"1974-07-07T02:09:07.603Z\",\n      \"updatedAt\": \"2021-10-11T00:48:25.528Z\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:username/approvals/pending",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":username",
+												"approvals",
+												"pending"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/events/invitations/:username/approvals/pending",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"events",
+												"invitations",
+												":username",
+												"approvals",
+												"pending"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "id proident sed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get events by filter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/events?Title=id proident sed&Description=id proident sed&City=id proident sed&ZipCode=id proident sed&ParticipantUsername=id proident sed&ParticipantName=id proident sed&StartDate=1981-10-06T05:28:35.544Z&EndDate=1981-10-06T05:28:35.544Z&CreatedBy=id proident sed&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "Title",
+									"value": "id proident sed"
+								},
+								{
+									"key": "Description",
+									"value": "id proident sed"
+								},
+								{
+									"key": "City",
+									"value": "id proident sed"
+								},
+								{
+									"key": "ZipCode",
+									"value": "id proident sed"
+								},
+								{
+									"key": "ParticipantUsername",
+									"value": "id proident sed"
+								},
+								{
+									"key": "ParticipantName",
+									"value": "id proident sed"
+								},
+								{
+									"key": "StartDate",
+									"value": "1981-10-06T05:28:35.544Z"
+								},
+								{
+									"key": "EndDate",
+									"value": "1981-10-06T05:28:35.544Z"
+								},
+								{
+									"key": "CreatedBy",
+									"value": "id proident sed"
+								},
+								{
+									"key": "PageSize",
+									"value": "9"
+								},
+								{
+									"key": "CurrentPage",
+									"value": "869206187"
+								},
+								{
+									"key": "OrderBy",
+									"value": "id proident sed"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events?Title=id proident sed&Description=id proident sed&City=id proident sed&ZipCode=id proident sed&ParticipantUsername=id proident sed&ParticipantName=id proident sed&StartDate=1981-10-06T05:28:35.544Z&EndDate=1981-10-06T05:28:35.544Z&CreatedBy=id proident sed&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									],
+									"query": [
+										{
+											"key": "Title",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Description",
+											"value": "id proident sed"
+										},
+										{
+											"key": "City",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ZipCode",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantUsername",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantName",
+											"value": "id proident sed"
+										},
+										{
+											"key": "StartDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "EndDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "CreatedBy",
+											"value": "id proident sed"
+										},
+										{
+											"key": "PageSize",
+											"value": "9"
+										},
+										{
+											"key": "CurrentPage",
+											"value": "869206187"
+										},
+										{
+											"key": "OrderBy",
+											"value": "id proident sed"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 58361283,\n  \"message\": \"proident Duis consequat sed dolore\",\n  \"data\": {\n    \"currentPage\": -64924571,\n    \"pageSize\": -51023759,\n    \"totalRecords\": -49492952,\n    \"totalPages\": 69833247,\n    \"data\": [\n      {\n        \"id\": \"ut\",\n        \"title\": \"sunt incididunt\",\n        \"description\": \"cillum deserunt dolore t\",\n        \"photoUrl\": \"dolore nisi pariatur\",\n        \"location\": {\n          \"city\": \"adipisicing sit cillum dolor incididunt\",\n          \"zipCode\": \"aute\"\n        },\n        \"participants\": [\n          {\n            \"username\": \"sunt esse consectetur ex\",\n            \"email\": \"Duis laborum\",\n            \"name\": \"ea in\",\n            \"photoUrl\": \"tempor culpa in dolore\"\n          },\n          {\n            \"username\": \"culpa deserunt\",\n            \"email\": \"exe\",\n            \"name\": \"veniam\",\n            \"photoUrl\": \"Lorem tempor nisi ea\"\n          }\n        ],\n        \"startDate\": \"2002-05-17T22:52:23.999Z\",\n        \"endDate\": \"2016-12-12T05:19:06.745Z\",\n        \"createdAt\": \"1981-09-18T12:45:06.017Z\",\n        \"updatedAt\": \"2019-10-09T06:45:08.174Z\",\n        \"createdBy\": \"laboris magna\"\n      },\n      {\n        \"id\": \"in ad volupta\",\n        \"title\": \"consequ\",\n        \"description\": \"sit aute ut\",\n        \"photoUrl\": \"Duis sed nostrud\",\n        \"location\": {\n          \"city\": \"dolor\",\n          \"zipCode\": \"Lorem aute ullamco sint\"\n        },\n        \"participants\": [\n          {\n            \"username\": \"labore eu\",\n            \"email\": \"do\",\n            \"name\": \"consequat \",\n            \"photoUrl\": \"sunt Excepteur ullamco consectetur commodo\"\n          },\n          {\n            \"username\": \"in aute ipsum irure\",\n            \"email\": \"qui culpa ut deserunt\",\n            \"name\": \"adipisicing occaecat\",\n            \"photoUrl\": \"q\"\n          }\n        ],\n        \"startDate\": \"1948-01-18T22:00:40.150Z\",\n        \"endDate\": \"2011-12-24T05:55:33.583Z\",\n        \"createdAt\": \"1963-04-21T11:39:41.912Z\",\n        \"updatedAt\": \"1986-01-19T00:37:39.057Z\",\n        \"createdBy\": \"est in sunt adipisicing\"\n      }\n    ]\n  }\n}"
+						},
+						{
+							"name": "Client Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events?Title=id proident sed&Description=id proident sed&City=id proident sed&ZipCode=id proident sed&ParticipantUsername=id proident sed&ParticipantName=id proident sed&StartDate=1981-10-06T05:28:35.544Z&EndDate=1981-10-06T05:28:35.544Z&CreatedBy=id proident sed&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									],
+									"query": [
+										{
+											"key": "Title",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Description",
+											"value": "id proident sed"
+										},
+										{
+											"key": "City",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ZipCode",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantUsername",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantName",
+											"value": "id proident sed"
+										},
+										{
+											"key": "StartDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "EndDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "CreatedBy",
+											"value": "id proident sed"
+										},
+										{
+											"key": "PageSize",
+											"value": "9"
+										},
+										{
+											"key": "CurrentPage",
+											"value": "869206187"
+										},
+										{
+											"key": "OrderBy",
+											"value": "id proident sed"
+										}
+									]
+								}
+							},
+							"status": "Failed Dependency (WebDAV) (RFC 4918)",
+							"code": 424,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+						},
+						{
+							"name": "Server Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/events?Title=id proident sed&Description=id proident sed&City=id proident sed&ZipCode=id proident sed&ParticipantUsername=id proident sed&ParticipantName=id proident sed&StartDate=1981-10-06T05:28:35.544Z&EndDate=1981-10-06T05:28:35.544Z&CreatedBy=id proident sed&PageSize=9&CurrentPage=869206187&OrderBy=id proident sed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									],
+									"query": [
+										{
+											"key": "Title",
+											"value": "id proident sed"
+										},
+										{
+											"key": "Description",
+											"value": "id proident sed"
+										},
+										{
+											"key": "City",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ZipCode",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantUsername",
+											"value": "id proident sed"
+										},
+										{
+											"key": "ParticipantName",
+											"value": "id proident sed"
+										},
+										{
+											"key": "StartDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "EndDate",
+											"value": "1981-10-06T05:28:35.544Z"
+										},
+										{
+											"key": "CreatedBy",
+											"value": "id proident sed"
+										},
+										{
+											"key": "PageSize",
+											"value": "9"
+										},
+										{
+											"key": "CurrentPage",
+											"value": "869206187"
+										},
+										{
+											"key": "OrderBy",
+											"value": "id proident sed"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Create event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"createdBy\": \"in irure eiusmod eu incididunt\",\n  \"description\": \"deserunt\",\n  \"endDate\": \"2013-10-12T18:47:50.112Z\",\n  \"location\": {\n    \"city\": \"culpa quis\",\n    \"zipCode\": \"incididunt i\"\n  },\n  \"photoUrl\": \"http://kNQfMiqplKzA.nhldQ4vyBZxzhaX6m9wB0ZBfvGP,r,w1tFjpPU2KFbVZIMIjES6\",\n  \"startDate\": \"2015-09-10T18:57:46.422Z\",\n  \"title\": \"adipisicing nulla sint consectetur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"createdBy\": \"in irure eiusmod eu incididunt\",\n  \"description\": \"deserunt\",\n  \"endDate\": \"2013-10-12T18:47:50.112Z\",\n  \"location\": {\n    \"city\": \"culpa quis\",\n    \"zipCode\": \"incididunt i\"\n  },\n  \"photoUrl\": \"http://kNQfMiqplKzA.nhldQ4vyBZxzhaX6m9wB0ZBfvGP,r,w1tFjpPU2KFbVZIMIjES6\",\n  \"startDate\": \"2015-09-10T18:57:46.422Z\",\n  \"title\": \"adipisicing nulla sint consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 9597399,\n  \"message\": \"sint id eiusmo\",\n  \"data\": {\n    \"id\": \"voluptate irure quis dolore\",\n    \"title\": \"consequat in\",\n    \"description\": \"tempor elit\",\n    \"photoUrl\": \"et reprehende\",\n    \"location\": {\n      \"city\": \"consectetur exercitation\",\n      \"zipCode\": \"fugiat voluptate\"\n    },\n    \"participants\": [\n      {\n        \"username\": \"consectetur commodo n\",\n        \"email\": \"eiusmod exercitation\",\n        \"name\": \"voluptate aliquip irure ullamco ipsum\",\n        \"photoUrl\": \"laborum Lorem aute do labore\"\n      },\n      {\n        \"username\": \"est sint eu\",\n        \"email\": \"pariatur Lorem Ut dolor labore\",\n        \"name\": \"do\",\n        \"photoUrl\": \"culpa non nisi\"\n      }\n    ],\n    \"startDate\": \"1992-12-16T10:42:22.676Z\",\n    \"endDate\": \"1947-04-13T21:55:42.867Z\",\n    \"createdAt\": \"1972-07-04T12:27:49.563Z\",\n    \"updatedAt\": \"2015-03-06T15:34:15.623Z\",\n    \"createdBy\": \"Excepteur anim dolore\"\n  }\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"createdBy\": \"in irure eiusmod eu incididunt\",\n  \"description\": \"deserunt\",\n  \"endDate\": \"2013-10-12T18:47:50.112Z\",\n  \"location\": {\n    \"city\": \"culpa quis\",\n    \"zipCode\": \"incididunt i\"\n  },\n  \"photoUrl\": \"http://kNQfMiqplKzA.nhldQ4vyBZxzhaX6m9wB0ZBfvGP,r,w1tFjpPU2KFbVZIMIjES6\",\n  \"startDate\": \"2015-09-10T18:57:46.422Z\",\n  \"title\": \"adipisicing nulla sint consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 9597399,\n  \"message\": \"sint id eiusmo\",\n  \"data\": {\n    \"id\": \"voluptate irure quis dolore\",\n    \"title\": \"consequat in\",\n    \"description\": \"tempor elit\",\n    \"photoUrl\": \"et reprehende\",\n    \"location\": {\n      \"city\": \"consectetur exercitation\",\n      \"zipCode\": \"fugiat voluptate\"\n    },\n    \"participants\": [\n      {\n        \"username\": \"consectetur commodo n\",\n        \"email\": \"eiusmod exercitation\",\n        \"name\": \"voluptate aliquip irure ullamco ipsum\",\n        \"photoUrl\": \"laborum Lorem aute do labore\"\n      },\n      {\n        \"username\": \"est sint eu\",\n        \"email\": \"pariatur Lorem Ut dolor labore\",\n        \"name\": \"do\",\n        \"photoUrl\": \"culpa non nisi\"\n      }\n    ],\n    \"startDate\": \"1992-12-16T10:42:22.676Z\",\n    \"endDate\": \"1947-04-13T21:55:42.867Z\",\n    \"createdAt\": \"1972-07-04T12:27:49.563Z\",\n    \"updatedAt\": \"2015-03-06T15:34:15.623Z\",\n    \"createdBy\": \"Excepteur anim dolore\"\n  }\n}"
+						},
+						{
+							"name": "Client Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"createdBy\": \"in irure eiusmod eu incididunt\",\n  \"description\": \"deserunt\",\n  \"endDate\": \"2013-10-12T18:47:50.112Z\",\n  \"location\": {\n    \"city\": \"culpa quis\",\n    \"zipCode\": \"incididunt i\"\n  },\n  \"photoUrl\": \"http://kNQfMiqplKzA.nhldQ4vyBZxzhaX6m9wB0ZBfvGP,r,w1tFjpPU2KFbVZIMIjES6\",\n  \"startDate\": \"2015-09-10T18:57:46.422Z\",\n  \"title\": \"adipisicing nulla sint consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									]
+								}
+							},
+							"status": "Failed Dependency (WebDAV) (RFC 4918)",
+							"code": 424,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+						},
+						{
+							"name": "Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"createdBy\": \"in irure eiusmod eu incididunt\",\n  \"description\": \"deserunt\",\n  \"endDate\": \"2013-10-12T18:47:50.112Z\",\n  \"location\": {\n    \"city\": \"culpa quis\",\n    \"zipCode\": \"incididunt i\"\n  },\n  \"photoUrl\": \"http://kNQfMiqplKzA.nhldQ4vyBZxzhaX6m9wB0ZBfvGP,r,w1tFjpPU2KFbVZIMIjES6\",\n  \"startDate\": \"2015-09-10T18:57:46.422Z\",\n  \"title\": \"adipisicing nulla sint consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"events"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": -2803063,\n  \"message\": \"in laboris\",\n  \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5467",
+			"type": "string"
+		}
+	]
+}
