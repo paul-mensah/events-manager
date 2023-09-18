@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2FAD1D14-8393-4B98-8839-4D08800DEF9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{360A5793-F4EA-480A-B356-1F1F1E1D3D97}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Events Manager Api.postman_collection.json = docs\Events Manager Api.postman_collection.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5C22F3BC-2149-4119-BC16-3E04DBEA9BDE}"
 EndProject
