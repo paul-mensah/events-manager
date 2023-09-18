@@ -1,6 +1,6 @@
 ﻿namespace EventsManager.API.Models.Responses;
 
-public sealed class PaginatedResponse<T> 
+public sealed class PaginatedResponse<T>
 {
     public int CurrentPage { get; set; }
     public int PageSize { get; set; }

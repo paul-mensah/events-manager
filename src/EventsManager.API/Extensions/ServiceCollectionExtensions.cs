@@ -31,34 +31,35 @@ public static class ServiceCollectionExtensions
                     Email = "paulmensah1409@gmail.com"
                 }
             });
-            
+
             c.ResolveConflictingActions(resolver => resolver.First());
             c.EnableAnnotations();
-            
+
             string xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             string xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
             c.IncludeXmlComments(xmlPath);
         });
     }
 
-    private static void AddElasticSearch(this IServiceCollection services, Action<ElasticsearchConfig> elasticsearchConfig)
+    private static void AddElasticSearch(this IServiceCollection services,
+        Action<ElasticsearchConfig> elasticsearchConfig)
     {
         if (services is null) throw new ArgumentNullException(nameof(services));
 
         services.Configure(elasticsearchConfig);
 
-        var elasticsearchConfiguration = new ElasticsearchConfig();
+        ElasticsearchConfig elasticsearchConfiguration = new();
         elasticsearchConfig.Invoke(elasticsearchConfiguration);
 
-        var pool = new SingleNodeConnectionPool(new Uri(elasticsearchConfiguration.Url));
-        var connectionSettings = new ConnectionSettings(pool)
+        SingleNodeConnectionPool pool = new(new Uri(elasticsearchConfiguration.Url));
+        ConnectionSettings connectionSettings = new ConnectionSettings(pool)
             .DefaultIndex(elasticsearchConfiguration.Index);
         connectionSettings.PrettyJson();
         connectionSettings.DisableDirectStreaming();
         connectionSettings.EnableApiVersioningHeader();
-        
-        var elasticClient = new ElasticClient(connectionSettings);
-        var elasticLowLevelClient = new ElasticLowLevelClient(connectionSettings);
+
+        ElasticClient elasticClient = new(connectionSettings);
+        ElasticLowLevelClient elasticLowLevelClient = new(connectionSettings);
 
         services.AddSingleton<IElasticClient>(elasticClient);
         services.AddSingleton<IElasticLowLevelClient>(elasticLowLevelClient);
@@ -71,10 +72,10 @@ public static class ServiceCollectionExtensions
 
         services.Configure(redisConfig);
 
-        var redisConfiguration = new RedisConfig();
+        RedisConfig redisConfiguration = new();
         redisConfig.Invoke(redisConfiguration);
-        
-        var connectionMultiplexer = ConnectionMultiplexer.Connect(new ConfigurationOptions
+
+        ConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect(new ConfigurationOptions
         {
             EndPoints = { redisConfiguration.BaseUrl },
             AllowAdmin = true,
@@ -91,12 +92,13 @@ public static class ServiceCollectionExtensions
     {
         services.AddDbContext<ApplicationDatabaseContext>(options =>
         {
-            options.UseMySQL(configuration.GetConnectionString("DbConnection") ?? 
+            options.UseMySQL(configuration.GetConnectionString("DbConnection") ??
                              throw new InvalidOperationException());
         }, ServiceLifetime.Transient).AddUnitOfWork<ApplicationDatabaseContext>();
     }
-    
-    public static void AddCustomServicesAndConfigurations(this IServiceCollection services, IConfiguration configuration)
+
+    public static void AddCustomServicesAndConfigurations(this IServiceCollection services,
+        IConfiguration configuration)
     {
         // Services
         services.AddElasticSearch(c => configuration.GetSection(nameof(ElasticsearchConfig)).Bind(c));
@@ -106,6 +108,4 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IEventService, EventService>();
         services.AddScoped<IInvitationService, InvitationService>();
     }
-    
-    
 }

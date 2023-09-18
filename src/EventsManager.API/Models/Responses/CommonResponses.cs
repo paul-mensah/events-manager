@@ -12,65 +12,81 @@ public static class CommonResponses
 
     public static class ErrorResponse
     {
-        public static BaseResponse<T> InternalServerErrorResponse<T>() =>
-            new BaseResponse<T>
+        public static BaseResponse<T> InternalServerErrorResponse<T>()
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.InternalServerError,
                 Message = InternalServerErrorResponseMessage
             };
-        
-        public static BaseResponse<T> BadRequestResponse<T>(string message) =>
-            new BaseResponse<T>
+        }
+
+        public static BaseResponse<T> BadRequestResponse<T>(string message)
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.BadRequest,
                 Message = message
             };
+        }
 
-        public static BaseResponse<T> FailedDependencyErrorResponse<T>() =>
-            new BaseResponse<T>
+        public static BaseResponse<T> FailedDependencyErrorResponse<T>()
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.FailedDependency,
                 Message = FailedDependencyErrorResponseMessage
             };
-        
-        public static BaseResponse<T> NotFoundErrorResponse<T>(string message) =>
-            new BaseResponse<T>
+        }
+
+        public static BaseResponse<T> NotFoundErrorResponse<T>(string message)
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.NotFound,
                 Message = message
             };
-        
-        public static BaseResponse<T> ConflictErrorResponse<T>(string message) =>
-            new BaseResponse<T>
+        }
+
+        public static BaseResponse<T> ConflictErrorResponse<T>(string message)
+        {
+            return new BaseResponse<T>
             {
-                Code = (int) HttpStatusCode.Conflict,
+                Code = (int)HttpStatusCode.Conflict,
                 Message = message
             };
+        }
     }
 
     public static class SuccessResponse
     {
-        public static BaseResponse<T> OkResponse<T>(T data, string message = null) =>
-            new BaseResponse<T>
+        public static BaseResponse<T> OkResponse<T>(T data, string message = null)
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.OK,
                 Message = message ?? DefaultOkResponseMessage,
                 Data = data
             };
-        
-        public static BaseResponse<T> CreatedResponse<T>(T data) =>
-            new BaseResponse<T>
+        }
+
+        public static BaseResponse<T> CreatedResponse<T>(T data)
+        {
+            return new BaseResponse<T>
             {
                 Code = (int)HttpStatusCode.Created,
                 Message = DefaultCreatedResponseMessage,
                 Data = data
             };
-        
-        public static BaseResponse<EmptyResponse> DeletedResponse() =>
-            new BaseResponse<EmptyResponse>
+        }
+
+        public static BaseResponse<EmptyResponse> DeletedResponse()
+        {
+            return new BaseResponse<EmptyResponse>
             {
                 Code = (int)HttpStatusCode.OK,
                 Message = DefaultDeletedResponseMessage
             };
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace EventsManager.Api.Tests;
 
 public static class EventFactory
 {
-    private static readonly Faker Faker = new Faker();
+    private static readonly Faker Faker = new();
 
     public static Event GenerateEvent()
     {
@@ -33,7 +33,6 @@ public static class EventFactory
         var participantsList = new List<EventParticipant>();
 
         for (int i = 0; i < count; i++)
-        {
             participantsList.Add(new EventParticipant
             {
                 PhotoUrl = Faker.Person.Avatar,
@@ -41,7 +40,6 @@ public static class EventFactory
                 Name = Faker.Person.FullName,
                 Username = Faker.Person.UserName
             });
-        }
 
         return participantsList;
     }

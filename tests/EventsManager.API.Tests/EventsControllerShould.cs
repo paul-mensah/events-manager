@@ -14,9 +14,9 @@ namespace EventsManager.Api.Tests;
 
 public class EventsControllerShould : IClassFixture<TestFixture>
 {
-    private readonly Mock<IEventService> _eventServiceMock;
     private readonly EventsController _eventsController;
-    
+    private readonly Mock<IEventService> _eventServiceMock;
+
     public EventsControllerShould()
     {
         _eventServiceMock = new Mock<IEventService>();
@@ -30,10 +30,10 @@ public class EventsControllerShould : IClassFixture<TestFixture>
         Event testEvent = EventFactory.GenerateEvent();
         var mockResponse = CommonResponses.SuccessResponse
             .OkResponse(testEvent.Adapt<EventResponse>());
-        
+
         _eventServiceMock.Setup(x => x.GetEventById(It.IsAny<string>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.GetEventById(testEvent.Id);
         var parsedResponse = response.Value as BaseResponse<EventResponse>;
@@ -44,17 +44,17 @@ public class EventsControllerShould : IClassFixture<TestFixture>
         parsedResponse?.Message.Should().Be(mockResponse.Message);
         parsedResponse?.Data.Id.Should().Be(testEvent.Id);
     }
-    
+
     [Fact]
     public async Task Return_404NotFound_Response_When_An_Id_Of_An_Event_Which_Does_Not_Exist_Is_Provided()
     {
         // Arrange
         var mockResponse = CommonResponses.ErrorResponse
             .NotFoundErrorResponse<EventResponse>("Event not found");
-        
+
         _eventServiceMock.Setup(x => x.GetEventById(It.IsAny<string>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.GetEventById(Guid.NewGuid().ToString("N"));
         var parsedResponse = response.Value as BaseResponse<EventResponse>;
@@ -65,17 +65,17 @@ public class EventsControllerShould : IClassFixture<TestFixture>
         parsedResponse?.Message.Should().Be(mockResponse.Message);
         parsedResponse?.Data.Should().BeNull();
     }
-    
+
     [Fact]
     public async Task Return_200OK_Response_When_An_Existing_Event_Is_Deleted()
     {
         // Arrange
         var mockResponse = CommonResponses.SuccessResponse
             .DeletedResponse();
-        
+
         _eventServiceMock.Setup(x => x.DeleteEventById(It.IsAny<string>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.DeleteEventById(Guid.NewGuid().ToString("N"));
         var parsedResponse = response.Value as BaseResponse<EventResponse>;
@@ -86,17 +86,17 @@ public class EventsControllerShould : IClassFixture<TestFixture>
         parsedResponse?.Message.Should().Be(mockResponse.Message);
         parsedResponse?.Data.Should().BeNull();
     }
-    
+
     [Fact]
     public async Task Return_424FailedDependency_Response_When_An_Error_Occurs_Deleting_An_Event()
     {
         // Arrange
         var mockResponse = CommonResponses.ErrorResponse
             .FailedDependencyErrorResponse<EmptyResponse>();
-        
+
         _eventServiceMock.Setup(x => x.DeleteEventById(It.IsAny<string>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.DeleteEventById(Guid.NewGuid().ToString("N"));
         var parsedResponse = response.Value as BaseResponse<EventResponse>;
@@ -115,10 +115,10 @@ public class EventsControllerShould : IClassFixture<TestFixture>
         CreateEventRequest eventRequest = EventFactory.GenerateEvent().Adapt<CreateEventRequest>();
         var mockResponse = CommonResponses.SuccessResponse
             .CreatedResponse(eventRequest.Adapt<EventResponse>());
-        
+
         _eventServiceMock.Setup(x => x.CreateEvent(It.IsAny<CreateEventRequest>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.CreateEvent(eventRequest);
         var parsedResponse = response.Value as BaseResponse<EventResponse>;
@@ -143,14 +143,14 @@ public class EventsControllerShould : IClassFixture<TestFixture>
     public async Task Return_400BadRequest_Response_When_InCorrect_Event_Details_Are_Provided()
     {
         // Arrange
-        CreateEventRequest eventRequest = new CreateEventRequest();
+        CreateEventRequest eventRequest = new();
 
         var mockResponse = CommonResponses.ErrorResponse
             .BadRequestResponse<EventResponse>(string.Empty);
-        
+
         _eventServiceMock.Setup(x => x.CreateEvent(It.IsAny<CreateEventRequest>()))
             .ReturnsAsync(mockResponse);
-        
+
         // Act
         ObjectResult? response = (ObjectResult)await _eventsController.CreateEvent(eventRequest);
         var parsedResponse = response.Value as BaseResponse<EventResponse>;

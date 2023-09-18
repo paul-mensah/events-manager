@@ -5,10 +5,10 @@ namespace EventsManager.Api.Tests.Setup;
 public static class ConfigurationManager
 {
     public static IConfiguration Configuration { get; private set; }
-    
+
     public static void SetupConfiguration()
     {
-        var builder = new ConfigurationBuilder()
+        IConfigurationBuilder? builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", true, true)
             .AddEnvironmentVariables();

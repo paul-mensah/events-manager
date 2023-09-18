@@ -4,7 +4,7 @@ using EventsManager.API.Storage.Repositories.Interfaces;
 
 namespace EventsManager.API.Storage.Repositories.Implementations;
 
-public class RepositoryBase<T> : IRepositoryBase<T> where T: EntityBase
+public class RepositoryBase<T> : IRepositoryBase<T> where T : EntityBase
 {
     private readonly ApplicationDatabaseContext _dbContext;
 

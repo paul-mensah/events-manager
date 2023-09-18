@@ -22,50 +22,40 @@ public class EventInvitationRepository : RepositoryBase<EventInvitation>, IEvent
         var eventInvitationQueryable = _dbContext.EventInvitations.AsNoTracking().AsQueryable();
 
         if (!string.IsNullOrEmpty(filter.Username))
-        {
             eventInvitationQueryable = eventInvitationQueryable.Where(x => x.Username.Equals(filter.Username));
-        }
-        
+
         if (!string.IsNullOrEmpty(filter.Email))
-        {
-            eventInvitationQueryable = eventInvitationQueryable.Where(x => x.Email.ToLower().Equals(filter.Email.ToLower()));
-        }
-        
+            eventInvitationQueryable =
+                eventInvitationQueryable.Where(x => x.Email.ToLower().Equals(filter.Email.ToLower()));
+
         if (!string.IsNullOrEmpty(filter.Name))
-        {
-            eventInvitationQueryable = eventInvitationQueryable.Where(x => x.Name.ToLower().Equals(filter.Name.ToLower()));
-        }
-        
+            eventInvitationQueryable =
+                eventInvitationQueryable.Where(x => x.Name.ToLower().Equals(filter.Name.ToLower()));
+
         if (!string.IsNullOrEmpty(filter.EventId))
-        {
             eventInvitationQueryable = eventInvitationQueryable.Where(x => x.EventId.Equals(filter.EventId));
-        }
-        
+
         if (!string.IsNullOrEmpty(filter.Title))
-        {
-            eventInvitationQueryable = eventInvitationQueryable.Where(x => x.Title.ToLower().Contains(filter.Title.ToLower()));
-        }
-        
+            eventInvitationQueryable =
+                eventInvitationQueryable.Where(x => x.Title.ToLower().Contains(filter.Title.ToLower()));
+
         if (!string.IsNullOrEmpty(filter.InvitedBy))
-        {
             eventInvitationQueryable = eventInvitationQueryable.Where(x => x.InvitedBy.Equals(filter.InvitedBy));
-        }
-        
+
         if (filter.IsAccepted.HasValue)
-        {
-            eventInvitationQueryable = eventInvitationQueryable.Where(x => x.IsAccepted.Equals(filter.IsAccepted.Value));
-        }
-        
+            eventInvitationQueryable =
+                eventInvitationQueryable.Where(x => x.IsAccepted.Equals(filter.IsAccepted.Value));
+
         if (filter.AcceptedDate.HasValue)
-        {
-            eventInvitationQueryable = eventInvitationQueryable.Where(x => x.AcceptedDate.Equals(filter.AcceptedDate.Value));
-        }
+            eventInvitationQueryable =
+                eventInvitationQueryable.Where(x => x.AcceptedDate.Equals(filter.AcceptedDate.Value));
 
         eventInvitationQueryable = "desc".Equals(filter.OrderBy, StringComparison.OrdinalIgnoreCase)
             ? eventInvitationQueryable.OrderByDescending(x => x.CreatedAt)
             : eventInvitationQueryable.OrderBy(x => x.CreatedAt);
 
-        var paginatedResponse = await eventInvitationQueryable.ToPagedListAsync(filter.CurrentPage - 1, filter.PageSize);
+        var paginatedResponse =
+            await eventInvitationQueryable.ToPagedListAsync(filter.CurrentPage - 1, filter.PageSize);
 
         return new PaginatedResponse<EventInvitation>
         {

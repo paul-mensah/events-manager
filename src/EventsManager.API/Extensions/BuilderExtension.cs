@@ -19,7 +19,7 @@ public static class BuilderExtension
         builder.Services.Configure<RouteOptions>(o => o.LowercaseUrls = true);
         builder.Services.AddCustomServicesAndConfigurations(builder.Configuration);
         builder.Services.AddHealthChecks();
-        
+
         return builder.Build();
     }
 
@@ -30,10 +30,11 @@ public static class BuilderExtension
         try
         {
             using IServiceScope scope = serviceProvider.CreateScope();
-            ApplicationDatabaseContext dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDatabaseContext>();
-        
+            ApplicationDatabaseContext dbContext =
+                scope.ServiceProvider.GetRequiredService<ApplicationDatabaseContext>();
+
             int pendingMigrations = (await dbContext.Database.GetPendingMigrationsAsync()).Count();
-            
+
             if (pendingMigrations >= 1)
             {
                 await dbContext.Database.MigrateAsync();
@@ -45,19 +46,16 @@ public static class BuilderExtension
             logger.LogError(e, "An error occured executing pending migrations");
         }
     }
-    
+
     public static void RunApplication(this WebApplication application)
     {
         // Check if there are pending migrations and execute
         RunMigrations(application.Services).GetAwaiter().GetResult();
-        
+
         // Configure the HTTP request pipeline.
-        
+
         application.UseSwagger();
-        application.UseSwaggerUI(s => 
-        {
-            s.SwaggerEndpoint("/swagger/v1/swagger.json", "Events Manager Api");
-        });
+        application.UseSwaggerUI(s => { s.SwaggerEndpoint("/swagger/v1/swagger.json", "Events Manager Api"); });
 
         application.UseCors(x => x
             .AllowAnyMethod()

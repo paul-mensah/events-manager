@@ -8,7 +8,6 @@ public class ApplicationDatabaseContext : DbContext
 {
     public ApplicationDatabaseContext(DbContextOptions options) : base(options)
     {
-        
     }
 
     public DbSet<EventInvitation> EventInvitations { get; set; }
@@ -18,14 +17,14 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<Applicatio
 {
     public ApplicationDatabaseContext CreateDbContext(string[] args)
     {
-        var configuration = new ConfigurationBuilder()
+        IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", false, true)
             .Build();
 
         string connectionStrings = configuration.GetConnectionString("DbConnection");
-        
-        var dbBuilder = new DbContextOptionsBuilder()
+
+        DbContextOptionsBuilder dbBuilder = new DbContextOptionsBuilder()
             .UseMySQL(connectionStrings);
 
         return new ApplicationDatabaseContext(dbBuilder.Options);

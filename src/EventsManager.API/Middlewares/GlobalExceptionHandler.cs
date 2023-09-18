@@ -14,7 +14,7 @@ public static class GlobalExceptionHandler
             error.Run(async context =>
             {
                 context.Response.ContentType = MediaTypeNames.Application.Json;
-                context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
+                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
                 IExceptionHandlerFeature exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
                 if (exceptionHandlerFeature is not null)
@@ -24,7 +24,7 @@ public static class GlobalExceptionHandler
 
                     var response = new
                     {
-                        code = (int) HttpStatusCode.InternalServerError,
+                        code = (int)HttpStatusCode.InternalServerError,
                         message = "Something bad happened, try again later"
                     };
 
