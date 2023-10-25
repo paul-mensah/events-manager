@@ -4,16 +4,15 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["EventsManager.API/EventsManager.API.csproj", "./"]
+COPY ["src/EventsManager.API/EventsManager.API.csproj", "src/EventsManager.API/"]
 
-RUN dotnet restore "EventsManager.API/EventsManager.API.csproj"
-
+RUN dotnet restore "src/EventsManager.API/EventsManager.API.csproj"
 COPY . .
 
 RUN dotnet new tool-manifest
 RUN dotnet tool install dotnet-ef
 
-WORKDIR "src/EventsManager.API/."
+WORKDIR "/src/src/EventsManager.API"
 RUN dotnet build "EventsManager.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
